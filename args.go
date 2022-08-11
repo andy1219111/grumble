@@ -444,3 +444,7 @@ func (a *Args) DurationList(name, help string, opts ...ArgOption) {
 		opts...,
 	)
 }
+
+func (a *Args) GetList() []*argItem {
+	return a.list
+}

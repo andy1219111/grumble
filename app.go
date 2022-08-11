@@ -497,3 +497,7 @@ Loop:
 
 	return nil
 }
+
+func (a *App) GetConfig() *Config {
+	return a.config
+}

@@ -57,7 +57,7 @@ func (f *Flags) Empty() bool {
 }
 
 // sort the flags by their name.
-func (f *Flags) sort() {
+func (f *Flags) Sort() {
 	sort.Slice(f.list, func(i, j int) bool {
 		return f.list[i].Long < f.list[j].Long
 	})
@@ -485,4 +485,8 @@ func trimQuotes(s string) string {
 		return s[1 : len(s)-1]
 	}
 	return s
+}
+
+func (f *Flags) GetList() []*flagItem {
+	return f.list
 }

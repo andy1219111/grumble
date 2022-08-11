@@ -294,7 +294,7 @@ func printFlags(a *App, flags *Flags) {
 	config.Glue = " "
 	config.Prefix = "  "
 
-	flags.sort()
+	flags.Sort()
 
 	var output []string
 	for _, f := range flags.list {
