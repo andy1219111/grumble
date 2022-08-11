@@ -117,3 +117,11 @@ func (c *Command) AddCommand(cmd *Command) {
 
 	c.commands.Add(cmd)
 }
+
+func (c *Command) GetFlags() Flags {
+	return c.flags
+}
+
+func (c *Command) GetArgs() Args {
+	return c.args
+}
