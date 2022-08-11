@@ -95,7 +95,7 @@ func (a *Args) register(
 		panic("max must not be less than min for list arguments")
 	}
 
-	if !a.empty() {
+	if !a.Empty() {
 		last := a.list[len(a.list)-1]
 
 		// Check, if a list argument has been supplied already.
@@ -113,7 +113,7 @@ func (a *Args) register(
 }
 
 // empty returns true, if the args are empty.
-func (a *Args) empty() bool {
+func (a *Args) Empty() bool {
 	return len(a.list) == 0
 }
 

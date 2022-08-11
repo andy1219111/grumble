@@ -52,7 +52,7 @@ type Flags struct {
 }
 
 // empty returns true, if the flags are empty.
-func (f *Flags) empty() bool {
+func (f *Flags) Empty() bool {
 	return len(f.list) == 0
 }
 

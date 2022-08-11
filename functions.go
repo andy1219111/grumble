@@ -232,10 +232,10 @@ func printUsage(a *App, cmd *Command) {
 
 	// Layout: Cmd [Flags] Args
 	a.Printf("  %s", cmd.Name)
-	if !cmd.flags.empty() {
+	if !cmd.flags.Empty() {
 		a.Printf(" [flags]")
 	}
-	if !cmd.args.empty() {
+	if !cmd.args.Empty() {
 		for _, arg := range cmd.args.list {
 			name := arg.Name
 			if arg.isList {
