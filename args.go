@@ -53,6 +53,22 @@ type Args struct {
 	list []*argItem
 }
 
+func (a *argItem) IsOptional() bool {
+	return a.optional
+}
+
+func (a *argItem) GetListMin() int {
+	return a.listMin
+}
+
+func (a *argItem) GetListMax() int {
+	return a.listMax
+}
+
+func (a *argItem) IsList() bool {
+	return a.isList
+}
+
 func (a *Args) register(
 	name, help, helpArgs string,
 	isList bool,
