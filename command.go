@@ -52,7 +52,7 @@ type Command struct {
 	// Sample: start [OPTIONS] CONTAINER [CONTAINER...]
 	Usage string
 
-	//IsHide ÊÇ·ñÊÇÒş²ØÃüÁî
+	//IsHide æ˜¯å¦éšè—è¯¥å‘½ä»¤
 	IsHide bool
 
 	// Define all command flags within this function.
