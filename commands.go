@@ -201,3 +201,7 @@ func (c *Commands) parse(
 	rest = args
 	return
 }
+
+func (c Commands) GetList() []*Command {
+	return c.list
+}

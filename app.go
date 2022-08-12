@@ -501,3 +501,11 @@ Loop:
 func (a *App) GetConfig() *Config {
 	return a.config
 }
+
+func (a *App) GetCommands() Commands {
+	return a.commands
+}
+
+func (a *App) GetFlags() Flags {
+	return a.flags
+}

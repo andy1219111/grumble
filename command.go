@@ -52,6 +52,9 @@ type Command struct {
 	// Sample: start [OPTIONS] CONTAINER [CONTAINER...]
 	Usage string
 
+	//IsHide  «∑Ò «“˛≤ÿ√¸¡Ó
+	IsHide bool
+
 	// Define all command flags within this function.
 	Flags func(f *Flags)
 
@@ -124,4 +127,8 @@ func (c *Command) GetFlags() Flags {
 
 func (c *Command) GetArgs() Args {
 	return c.args
+}
+
+func (c *Command) GetCommands() Commands {
+	return c.commands
 }
