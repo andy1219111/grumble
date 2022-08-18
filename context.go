@@ -38,7 +38,7 @@ type Context struct {
 	// Cmd is the currently executing command.
 	Command *Command
 
-	//命令行输入的内容
+	//鍛戒护琛岃緭鍏ョ殑鍐呭
 	Line string
 }
 
