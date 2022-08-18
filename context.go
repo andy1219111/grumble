@@ -37,14 +37,18 @@ type Context struct {
 
 	// Cmd is the currently executing command.
 	Command *Command
+
+	//命令行输入的内容
+	Line string
 }
 
-func newContext(a *App, cmd *Command, flags FlagMap, args ArgMap) *Context {
+func newContext(a *App, cmd *Command, flags FlagMap, args ArgMap, line string) *Context {
 	return &Context{
 		App:     a,
 		Command: cmd,
 		Flags:   flags,
 		Args:    args,
+		Line:    line,
 	}
 }
 

@@ -236,6 +236,7 @@ func (a *App) addCommand(cmd *Command, addHelpFlag bool) {
 
 // RunCommand runs a single command.
 func (a *App) RunCommand(args []string) error {
+	line := strings.Join(args, " ")
 	// Parse the arguments string and obtain the command path to the root,
 	// and the command flags.
 	cmds, fg, args, err := a.commands.parse(args, a.flagMap, false)
@@ -267,7 +268,7 @@ func (a *App) RunCommand(args []string) error {
 	}
 
 	// Create the context and pass the rest args.
-	ctx := newContext(a, cmd, fg, cmdArgMap)
+	ctx := newContext(a, cmd, fg, cmdArgMap, line)
 
 	// Run the command.
 	err = cmd.Run(ctx)
